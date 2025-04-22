@@ -11,15 +11,9 @@
     <groupId>ic</groupId>
     <artifactId>ic-api-platform</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging> <!-- 关键：父模块打包方式为 pom -->
     <name>ic-api-platform</name>
     <description>ic-api-platform</description>
-    <packaging>pom</packaging> <!-- 关键：父模块打包方式为 pom -->
-
-    <!-- 子模块列表 -->
-    <modules>
-
-    </modules>
-
     <url/>
     <licenses>
         <license/>
@@ -36,6 +30,12 @@
     <properties>
         <java.version>17</java.version>
     </properties>
+
+    <!-- 子模块列表 -->
+    <modules>
+        <module>client-sdk</module>
+    </modules>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -51,6 +51,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.25</version>
         </dependency>
     </dependencies>
 
